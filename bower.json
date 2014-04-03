@@ -1,0 +1,20 @@
+{
+  "name": "leap-sinatra",
+  "version": "0.0.0",
+  "authors": [
+    "Clément Hussenot <chussenot@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "underscore": "~1.6.0",
+    "bootstrap": "~3.1.1"
+  }
+}
