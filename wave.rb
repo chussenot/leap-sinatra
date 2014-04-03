@@ -1,6 +1,8 @@
 module Leap
   
   class Base < Sinatra::Base
+    set :root, File.dirname(__FILE__)
+
     register  Sinatra::Namespace
     register  Sinatra::MultiRoute
 
@@ -26,21 +28,9 @@ module Leap
   end
 
   class Wave < Base
-    helpers  Sinatra::Sprockets::Helpers
+    register Sinatra::AssetPack
 
-    Sinatra::Sprockets.configure do |config|
-      config.app = self
-
-      ['stylesheets', 'javascripts', 'images'].each do |dir|
-        config.append_path(File.join('assets', dir))
-        config.js_compressor  = Uglifier.new(mangle: false)
-        config.css_compressor = false
-        config.digest = false
-        config.compress = false
-        config.debug = false
-
-        config.precompile = ['application.js']
-      end
+    assets do
     end
 
     get "/" do

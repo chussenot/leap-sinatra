@@ -42,8 +42,9 @@ gem 'bson_ext', '~> 1.9'
 
 gem 'coffee-script'
 gem 'haml'
-gem 'alphasights-sinatra-sprockets', require: 'sinatra/sprockets'
-gem 'uglifier'
+gem 'sass'
+
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
 
 gem 'foreman'
 gem 'puma'
