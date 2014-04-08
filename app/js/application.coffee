@@ -1,3 +1,9 @@
-#= require wave
+source = new EventSource('/events')
 
-console.log 'loaded'
+source.addEventListener 'open', (event) ->
+  console.log 'connected'
+, false
+
+source.addEventListener 'leap', (event) ->
+  console.log(event.data)
+, false
