@@ -36,3 +36,6 @@ bundle exec foreman start
 ├── lib
 │   └── wave.rb
 └── log
+
+# Event Source
+http://www.html5rocks.com/en/tutorials/eventsource/basics/?redirect_from_locale=fr
