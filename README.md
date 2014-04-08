@@ -12,6 +12,8 @@ Install JS and CSS dependencies
 
 Download Leap SDK
 `https://developer.leapmotion.com/downloads`
+Compile a ruby Wrapper
+`https://support.leapmotion.com/entries/40627757-Any-plans-for-Ruby-Support-
 
 Launch the Rack-based App
 ```
