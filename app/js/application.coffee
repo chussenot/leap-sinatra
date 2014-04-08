@@ -1,9 +1,9 @@
 source = new EventSource('/events')
 
 source.addEventListener 'open', (event) ->
-  console.log 'connected'
-, false
+  console.log('open')
+, false  
 
-source.addEventListener 'leap', (event) ->
-  console.log(event.data)
+source.addEventListener 'error', (event) ->
+  console.log('error')
 , false
