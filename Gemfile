@@ -43,6 +43,7 @@ gem 'bson_ext', '~> 1.9'
 gem 'coffee-script'
 gem 'haml'
 gem 'sass'
+gem 'celluloid-io'
 
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
 
