@@ -20,7 +20,6 @@ module Leap
     end
 
     configure :development do
-      register Sinatra::Reloader
       set :environment, :development
       enable :logging
     end
