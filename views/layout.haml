@@ -2,12 +2,7 @@
 %html
   %head
     %title Wave
-    != css "application"
-    != js  "application"
+    %script{src: "js/application.js", type: "text/javascript"}
+    %style{href:"css/application.css"}
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.brand{href: "#"} Wave
-    .container
       #wave

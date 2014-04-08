@@ -1,7 +1,11 @@
+# encoding: utf-8
+
 module Leap
-  
+
   class Base < Sinatra::Base
     set :root, File.dirname(__FILE__)
+
+    $listeners  = Connections.new
 
     register  Sinatra::Namespace
     register  Sinatra::MultiRoute
@@ -9,7 +13,7 @@ module Leap
     configure do
       set :server, :puma
     end
-    
+
     configure :test do
       set :environment, :test
       disable :logging
@@ -31,6 +35,8 @@ module Leap
     register Sinatra::AssetPack
 
     assets do
+      serve '/js',     from: 'app/js'        # Default
+      serve '/css',    from: 'app/css'       # Default
     end
 
     get "/" do
@@ -38,8 +44,9 @@ module Leap
     end
 
     get '/events', provides: 'text/event-stream' do
+      stream(:keep_open) {|connection| $listeners.join(connection) }
     end
-  
+
   end
 
 end
