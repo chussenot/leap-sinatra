@@ -5,6 +5,6 @@ require 'sinatra/base'
 require 'sinatra/assetpack'
 
 require './lib/leap/Leap.bundle'
-require './stream'
-require './connections'
+require './lib/stream'
+require './lib/connections'
 require './wave'
