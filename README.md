@@ -2,8 +2,7 @@ Testing Leap Motion in a web interface
 ======================================
 
 Clone the repository
-`git clone git@github.com:chussenot/intime-api.git`
-
+`git clone git@github.com:chussenot/leap-sinatra.git
 Install gems
 `bundle install`
 
